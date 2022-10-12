@@ -1,0 +1,58 @@
+.box_head {
+  text-align: right;
+}
+.link_head {
+  margin-right: 10%;
+  text-align: right;
+}
+.login_form {
+  width: max-content;
+  display: block;
+  margin: 100px auto;
+}
+.d_flex {
+  display: flex;
+}
+.min_w_100 {
+  min-width: 100px;
+}
+.box_input {
+  width: 300px;
+  margin: 0px 0px 0px 20px;
+  height: 34px;
+}
+.err {
+  color: red;
+  font-size: 12px;
+  height: 20px;
+  margin: 0;
+  padding-left: 20px;
+}
+.ip_submit {
+  padding: 10px 40px;
+  display: block;
+  margin: 30px auto;
+  background: blue;
+  color: white;
+  border: none;
+}
+.success {
+  width: 100%;
+  background: blue;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.box_login {
+  display: flex;
+  align-items: center;
+}
+.login_submit {
+  padding: 10px 40px;
+  display: block;
+  margin: 20px 20px 20px auto;
+  background: blue;
+  color: white;
+  border: none;
+}

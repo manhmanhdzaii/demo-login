@@ -30,51 +30,42 @@ if ($_REQUEST) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title> Đăng nhập </title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<p style="text-align:right;"><a href="/demo-login/view/register.php" style="margin-right:10%; text-align:right;">Đăng
-        ký</a></p>
-<form action="?action=login" method="post" style="width:max-content; display:block; margin:100px auto"
-    enctype="multipart/form-data">
-    <?php
-    if (isset($_COOKIE['success'])) {
-        echo '<p style="width: 100%; background: blue;text-align: center;padding: 10px;color: white;font-size: 18px;">' . $_COOKIE['success'] . '<p>';
-    }
-    ?>
-    <div style="display:flex">
-        <p style="min-width:100px">Tên đăng nhập</p>
-        <div class="div">
-            <input type="text" placeholder="Nhập tên đăng nhập"
-                style="width:300px; margin:0px 0px 0px 20px;height: 34px;" name="user_name"
-                value="<?php echo isset($_REQUEST['user_name']) ? $_REQUEST['user_name'] : ""; ?>">
-            <p style="color:red; font-size:12px; height:20px;margin:0;padding-left:20px">
-                <?php echo $err['user_name']; ?>
-            </p>
-        </div>
-    </div>
-
-    <div style="display:flex">
-        <p style="min-width:100px">Mật khẩu</p>
-        <div class="div">
-            <input type="password" placeholder="Nhập mật khẩu"
-                style="width:300px; margin:0px 0px 0px 20px;height: 34px;" name="password">
-            <p style="color:red; font-size:12px;height:20px; margin:0;padding-left:20px"><?php echo $err['password']; ?>
-            </p>
-        </div>
-
-
-    </div>
-
-    <div style="display: flex;  align-items: center;">
-        <input type="submit" value="Gửi"
-            style="padding: 10px 40px;display:block; margin:20px 20px 20px auto;background: blue;color: white;border: none;">
-        <a href="/demo-login/view/forgot.php">Quên mật khẩu ?</a>
-
-    </div>
-</form>
 
 <body>
-
+    <p class="box_head"><a href="/demo-login/view/register.php" class="link_head"> Đăng ký </a></p>
+    <form action="?action=login" method="post" class="login_form" enctype="multipart/form-data">
+        <?php
+        if (isset($_COOKIE['success'])) {
+            echo '<p class="success">' . $_COOKIE['success'] . '<p>';
+        }
+        ?>
+        <div class="d_flex">
+            <p class="min_w_100"> Tên đăng nhập </p>
+            <div class="div">
+                <input type="text" placeholder="Nhập tên đăng nhập" class="box_input" name="user_name"
+                    value="<?php echo isset($_REQUEST['user_name']) ? $_REQUEST['user_name'] : ""; ?>">
+                <p class="err">
+                    <?php echo $err['user_name']; ?>
+                </p>
+            </div>
+        </div>
+        <div class="d_flex">
+            <p class="min_w_100"> Mật khẩu </p>
+            <div class="div">
+                <input type="password" placeholder="Nhập mật khẩu" class="box_input" name="password">
+                <p class="err">
+                    <?php echo $err['password']; ?>
+                </p>
+            </div>
+        </div>
+        <div class="box_login">
+            <input type="submit" value="Gửi" class="login_submit">
+            <a href="/demo-login/view/forgot.php"> Quên mật khẩu ? </a>
+        </div>
+    </form>
 </body>
 
 </html>
