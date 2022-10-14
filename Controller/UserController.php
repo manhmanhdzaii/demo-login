@@ -48,4 +48,12 @@ class UserController extends Controller
             header('Location: login.php');
         }
     }
+
+    function detail()
+    {
+        $id = $_GET['id'];
+        $users = new User();
+        $result =  $users->getOne($id);
+        return $result;
+    }
 }
